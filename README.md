@@ -2,7 +2,7 @@
 
 SDD Study App (Prototype) by Timothy
 
-After downloading the files, open the Main.html file to begin. As this is a prototype, some graphics and features may not yet be implemented (eg. the weekly study goal system, language options, theme options). However, the main functionality of the app is complete.
+After downloading the files, open the Login.html file to begin. As this is a prototype, some graphics and features may not yet be implemented (eg. the weekly study goal system, language options and theme options). However, the main functionality of the app is complete.
 
 This is a prototype of a study app for year 12 SDD (Software Development and Design) students. The app includes the following features:
 - **A Weekly Goal system**, where you can set a weekly study goal for the app
