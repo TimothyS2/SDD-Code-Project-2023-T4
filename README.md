@@ -11,7 +11,7 @@ This is a prototype of a study app for year 12 SDD (Software Development and Des
 - **A Cloze Passage activity**, where students can test their knowledge on the SDD module
 
 
-*For Customisations:*
+**For Customisations:**
 
 To alter the multiple-choice questions and answers, do the following:
 1. Open the respective MultipleChoice.html file for each question and alter the text written for each question
