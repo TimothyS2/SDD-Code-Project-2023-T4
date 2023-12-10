@@ -1,5 +1,18 @@
 
-//Scripts for the Multiple Choice activity
+//This login function is a stub. It only permits login if there is an input for both studentID and Password
+function checkLogin() {
+    loginStudentID = document.getElementById("inputStudentID").value;
+    loginPassword = document.getElementById("inputPassword").value;
+    if (loginStudentID != "" && loginPassword != ""){
+        window.location.href='Main.html';
+    }
+    else{
+        document.getElementById("loginUnsuccessful").innerHTML = "Invalid username or password. Please try again.";
+    }
+}
+
+
+/* Scripts for the Multiple Choice activity */
 
 //This line sets the Multiple Choice score counter at 0 in local storage for later use
 localStorage.setItem('ScoreCounter', '0');
