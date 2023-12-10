@@ -13,21 +13,22 @@
     <div class="container" style="text-align: center;">
         <!-- Using a div tag to keep the home button, title and settings button on the same line-->
         <img class="clickable"
-          src='Images/Home.png' alt='Home'style="width:50px;height:50px;" onclick= window.location.href='main.html'>
+          src='Images/Home.png' alt='Home'style="width:50px;height:50px;" onclick= window.location.href='Main.html'>
         <h1 style="font-size: 52;"> Multiple Choice Quiz </h1>
         <img class="clickable" src="Images/Settings.png" style="width:50px;height:50px; margin-left:20%" onclick= window.location.href='Settings.html'>
       </div>
-      <p id="scoreDisplay" style="text-align: center;">Score: </p>
+      <p id="scoreDisplay" style="text-align: center;">Score: 0</p>
     <h3 style="text-align: center; margin-bottom: 20px;" id="multipleChoiceQuestionNum">
      <!-- Heading of the page-->
-     Question 1
+     Question 1 of 5
      </h3>
-     <p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p>
+     <p style="text-align: center;">Which software development approach delivers working versions of software after each iteration and involves close collaboration between developers and clients?
+     </p>
 
-     <button id="multipleChoiceOption1" onclick="advanceQuestion1('A')">A </button>
-     <button id="multipleChoiceOption2" onclick="advanceQuestion1('B')">B </button>
-     <button id="multipleChoiceOption3" onclick="advanceQuestion1('C')">C </button>
-     <button id="multipleChoiceOption4" onclick="advanceQuestion1('D')">D </button>
+     <button id="multipleChoiceOption1" onclick="advanceQuestion1('A')">A. Agile approach </button>
+     <button id="multipleChoiceOption2" onclick="advanceQuestion1('B')">B. Structured approach </button>
+     <button id="multipleChoiceOption3" onclick="advanceQuestion1('C')">C. RAD approach</button>
+     <button id="multipleChoiceOption4" onclick="advanceQuestion1('D')">D. End-user approach </button>
      
 
 

@@ -1,5 +1,5 @@
 
-//This login function is a stub. It only permits login if there is an input for both studentID and Password
+//This login function is a stub. It only permits login if there is an input for both studentID and Password. It then redirects users to the Main page
 function checkLogin() {
     loginStudentID = document.getElementById("inputStudentID").value;
     loginPassword = document.getElementById("inputPassword").value;
@@ -15,113 +15,144 @@ function checkLogin() {
 /* Scripts for the Multiple Choice activity */
 
 //This line sets the Multiple Choice score counter at 0 in local storage for later use
-localStorage.setItem('ScoreCounter', '0');
+localStorage.setItem('scoreMultipleChoice', '0');
+const totalMultipleChoiceQuestions = 5;
 
-//The below function advances the quiz from question 1 to question 2, directing users to the next page
-//It also creates a new variable to track the user's score after question 1, which will be used for question 2's score calculation
+/*The below function advances the quiz from question 1 to question 2.
+It checks if the user's answer matches the correct answer and increments the score if they match.
+It also creates a new localStorage variable to track the user's score after question 1, which will be used for question 2's score calculation */
 function advanceQuestion1(answer) {
-    let score = '0';
+    let scoreMultipleChoice = '0';
     if (answer === 'A') {
-        score = parseInt(score);
-        score += 1;
+        scoreMultipleChoice = parseInt(scoreMultipleChoice);
+        scoreMultipleChoice += 1;
     } else {
     };
-    localStorage.setItem('ScoreCounterQ1', score);
+    localStorage.setItem('scoreMultipleChoiceQ1', scoreMultipleChoice);
     window.location.href = "MultipleChoiceQ2.html";
 }
 
 
-//The below function advences the quiz from question 2 to question 3, directing users to the next page
-//It also creates a new variable to track the user's score after question 2, which will be used for question 3's score calculation
+/*The below function advances the quiz from question 2 to question 3
+It checks if the user's answer matches the correct answer and increments the score if they match.
+It also creates a new localStorage variable to track the user's score after question 2, which will be used for question 3's score calculation */
 function advanceQuestion2(answer) {
-    let score = localStorage.getItem('ScoreCounterQ1');
+    let scoreMultipleChoice = localStorage.getItem('scoreMultipleChoiceQ1');
     if (answer === 'C') {
-        score = parseInt(score);
-        score += 1;
+        scoreMultipleChoice = parseInt(scoreMultipleChoice);
+        scoreMultipleChoice += 1;
     } else {};  
-    localStorage.setItem('ScoreCounterQ2', score);
+    localStorage.setItem('scoreMultipleChoiceQ2', scoreMultipleChoice);
     window.location.href = "MultipleChoiceQ3.html";
 }
 
-//The below function advences the quiz from question 3 to question 4, directing users to the next page
-//It also creates a new variable to track the user's score after question 3, which will be used for question 4's score calculation
+/*The below function advances the quiz from question 3 to question 4.
+It checks if the user's answer matches the correct answer and increments the score if they match.
+It also creates a new localStorage variable to track the user's score after question 3, which will be used for question 4's score calculation */
 function advanceQuestion3(answer) {
-    let score = localStorage.getItem('ScoreCounterQ2');
+    let scoreMultipleChoice = localStorage.getItem('scoreMultipleChoiceQ2');
     if (answer === 'C') {
-        score = parseInt(score);
-        score += 1;
+        scoreMultipleChoice = parseInt(scoreMultipleChoice);
+        scoreMultipleChoice += 1;
     } else {};  
-    localStorage.setItem('ScoreCounterQ3', score);
+    localStorage.setItem('scoreMultipleChoiceQ3', scoreMultipleChoice);
     window.location.href = "MultipleChoiceQ4.html";
 
 
 }
 
-//The below function advences the quiz from question 4 to question 5, directing users to the next page
-//It also creates a new variable to track the user's score after question 4, which will be used for question 5's score calculation
+/*The below function advances the quiz from question 4 to question 5.
+It checks if the user's answer matches the correct answer and increments the score if they match.
+It also creates a new localStorage variable to track the user's score after question 4, which will be used for question 5's score calculation */
 function advanceQuestion4(answer) {
-    let score = localStorage.getItem('ScoreCounterQ3');
+    let scoreMultipleChoice = localStorage.getItem('scoreMultipleChoiceQ3');
     if (answer === 'D') {
-        score = parseInt(score);
-        score += 1;
+        scoreMultipleChoice = parseInt(scoreMultipleChoice);
+        scoreMultipleChoice += 1;
     } else {};  
-    localStorage.setItem('ScoreCounterQ4', score);
+    localStorage.setItem('scoreMultipleChoiceQ4', scoreMultipleChoice);
     window.location.href = "MultipleChoiceQ5.html";
 
 }
 
-//The below function advences the quiz from question 5 to the results screen. It also saves the final score variable in localStorage, to preserve it between the screens
+/*The below function advances the quiz from question 5 to the results screen.
+It checks if the user's answer matches the correct answer and increments the score if they match.
+It also saves the final score variable in localStorage to preserve it between the screens */
 function advanceQuestion5(answer) {
-    let score = localStorage.getItem('ScoreCounterQ4');
+    let scoreMultipleChoice = localStorage.getItem('scoreMultipleChoiceQ4');
     if (answer === 'A') {
-        score = parseInt(score);
-        score += 1;
+        scoreMultipleChoice = parseInt(scoreMultipleChoice);
+        scoreMultipleChoice += 1;
     } else {};  
-    localStorage.setItem('ScoreCounterQ5', score);
+    localStorage.setItem('scoreMultipleChoiceQ5', scoreMultipleChoice);
     window.location.href = "MultipleChoiceResults.html";
 
 
 }
 
-//The below function displays the score onto the screen. This function is used for every question page including the results page.
+/*The below function displays the score onto the screen. To do this, it gets the score variable stored in localStorage for the respective question.
+This function is used for every question page including the results page.
+For the results page, it will display additional text before the score itself*/
 function displayScore(currentQuestionNum) {
     let index = currentQuestionNum-2;
-    let scoreVariables = ['ScoreCounterQ1','ScoreCounterQ2','ScoreCounterQ3','ScoreCounterQ4','ScoreCounterQ5']
-    let score = localStorage.getItem(scoreVariables[index]);
-    document.getElementById("scoreDisplay").innerHTML = "Score: " + score;
+    let scoreVariables = ['scoreMultipleChoiceQ1','scoreMultipleChoiceQ2','scoreMultipleChoiceQ3','scoreMultipleChoiceQ4','scoreMultipleChoiceQ5']
+    let scoreMultipleChoice = localStorage.getItem(scoreVariables[index]);
+    if (index === 4) {
+    document.getElementById("scoreDisplay").innerHTML = "You scored: " + scoreMultipleChoice + " / " + totalMultipleChoiceQuestions;
+    }
+    else{
+    document.getElementById("scoreDisplay").innerHTML = "Score: " + scoreMultipleChoice;
+    }
 }
 
 /*End of the Multiple Choice scripts
---------------------------------------------------------------------
+-----------------------------------------------------------------------
 Scripts for the Flashcard activity */
+const totalFlashcards = 5;
 
 //This function flips the flashcard when it is clicked
 function flipCard() {
     flashcard.classList.toggle("flipCardAction");
 }
+
+//This function displays how many flashcards were available for study
+function displayFlashcardResults() {
+    document.getElementById("flashcardEndDisplay").innerHTML = "You have studied " + totalFlashcards + " flashcards";
+    
+}
 /* End of the Flashcard script
 
---------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 Scripts for the Cloze Passage activity */
 
-const clozePassageText = ["Privacy and accessbility are ___________ of the software developer.", "Statement 2", "Statemetn 3", "Statement 4", "Statement 5", ];
+//The below code globally declares the variables required for the cloze passage
+const clozePassageText = ["Software developers need to consider their products' social and _____ impacts.",
+"The ______ software development approach involves distinct formal stages and is usually used for large-scale projects.",
+"A _____ licence allows a software product to be installed on multiple devices in one location with one licence.",
+"Software ______ is the act of illegally copying, modifying, distributing, sharing, or selling software protected by copyright laws.",
+"A _______ chart represents the hierarchical structure of modules and the data that flows between them in a software project.", ];
 let userInputAnswer = '';
-const correctClozeAnswers = ['z', '2a', 'a', '4a', '5a'];
+const correctClozeAnswers = ['ethical', 'structured', 'site', 'piracy', 'structure'];
 let currentPassageIndex = 0;
 const totalPassages = 5;
 let clozeScore = 0;
 
+//This function displays the first cloze passage on the screen, setting the score to 0
 function initiateCloze() {
     document.getElementById("clozePassage").innerHTML = clozePassageText[currentPassageIndex];
     clozeScore = 0;
 }
 
+/*This function checks whether the correct answer has been submitted to the respective cloze passage. Then it updates the screen with the
+new passage number, new passage text, new score and clears the input field box. 
+When the user completes question 5, their answer is checked and they are sent to the results screen.
+*/
 function checkAnswer() {
     userInputAnswer = document.getElementById("userInput").value.trim().toLowerCase();
-    if ( currentPassageIndex < totalPassages-1) {
-        if ( userInputAnswer == correctClozeAnswers[currentPassageIndex]) {
-            
+    
+    if ( userInputAnswer == correctClozeAnswers[currentPassageIndex]) {
+           
             clozeScore++ ;
             currentPassageIndex++;
             document.getElementById("currentPassageNum").innerHTML = "Passage " + (1 + currentPassageIndex) + " of " + totalPassages;
@@ -135,23 +166,19 @@ function checkAnswer() {
             document.getElementById("clozePassage").innerHTML = clozePassageText[currentPassageIndex];
             document.getElementById("clozeScoreDisplay").innerHTML = "Passages completed correctly: " + clozeScore;
             ClearAnswerBox();
-        }
-    }
-    else {
+        };
+    if ( currentPassageIndex === totalPassages) {
         window.location.href = "ClozePassageResults.html";
         localStorage.setItem('ClozePassageScore', clozeScore); // This line stores the user's score in localStorage so that it can be accessed on the results screen
-
-        //reset index
-        //go to results
     }
 
     
 }
 
-//The below function displays the user's final score for the Cloze Passage activity
+//The below function displays the user's final score for the Cloze Passage activity on the cloze passage results screen
 function displayClozeResults() {
     let finalClozeScore = localStorage.getItem('ClozePassageScore');
-    document.getElementById("clozeScoreDisplay").innerHTML = "Score: " + finalClozeScore;
+    document.getElementById("clozeScoreDisplay").innerHTML = "You scored: " + finalClozeScore + " / " + totalPassages;
 
 }
 

@@ -19,9 +19,9 @@ html, body {
       margin-bottom:4% ;
      }
 
-.rectangle{
+.resultRectangle{
   height: 70px;
-  width: 100px;
+  width: 150px;
   background-color: #dbd6d5;
   padding-top: 25px;
 }
