@@ -10,6 +10,9 @@ This is a prototype of a study app for year 12 SDD (Software Development and Des
 - **A Flashcards activity**, where students can study using a variety of flashcards
 - **A Cloze Passage activity**, where students can test their knowledge on the SDD module
 
+
+*For Customisations:*
+
 To alter the multiple-choice questions and answers, do the following:
 1. Open the respective MultipleChoice.html file for each question and alter the text written for each question
 2. Also in the MultipleChoice.html file, alter the four 'button' elements at the bottom of the file to change the answer options
