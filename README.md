@@ -11,6 +11,7 @@ This is a prototype of a study app for year 12 SDD (Software Development and Des
 - **A Cloze Passage activity**, where students can test their knowledge on the SDD module
 - **A variety of language options**, allowing for greater user accessibility
 - **Multiple appearance themes**, allowing for more effective user experience
+There are currently 5 questions for each activity in this prototype.
 
 
 **For question and answer customisations:**
