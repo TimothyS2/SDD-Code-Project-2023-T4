@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Settings</title>
+    <meta name='viewport' content='width=device-width'>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src='script.js'></script>
+</head>
+
+<body>
+    <div class="container" style="text-align: center;">
+        <!-- Using a div tag to keep the home button, title and settings button on the same line-->
+        <img class="clickable"
+          src='Images/Home.png' alt='Home'style="width:50px;height:50px;" onclick= window.location.href='main.html'>
+        <h1 style="font-size: 52;"> SDD Study app </h1>
+        <img class="clickable" src="Images/Settings.png" style="width:50px;height:50px; margin-left:20%" onclick= window.location.href='Settings.html'>
+      </div>
+    
+        <h2 style="text-align: center; margin-bottom: 20px;">
+          <!-- Heading of the page-->
+          Settings
+        </h2>
+        
+        <h4 for="languageChoice" style="width:150px; text-align: center;">Theme</h4>
+        <button style="float:right; margin-right: 20%;margin-top: -3%;">Light theme</button>
+        <button style="float:right; margin-right: 2%;margin-top: -3%;">Dark theme</button>
+        <div class="container" style="margin-top: 10%;">
+            <h4 for="languageChoice" style="width:150px; text-align: center;">Language</h4>
+            <select name="languageChoice" id="languageChoice" size=1 style="margin-right:15%;margin-left: 10%;width: 300px;height: 40px;">
+                <option value="none">English</option>
+                <option>Language 2</option>
+                <option>Language 3</option>
+                <option>Language 4</option>
+                <option>Language 5</option>
+              </select>
+        </div>
+        <div class="container" style="margin-top: 10%;">
+            <h4 for="weeklyGoalTime" style="width:150px; text-align: center;margin-top: 10%;">Weekly study goal</h4>
+            <select name="weeklyGoalTime" id="weeklyGoalTime" size=1 style="margin-right:15%;margin-left: 10%;width: 300px;height: 40px;">
+                <option value="none">2 hours</option>
+                <option>2 hours 30 minutes</option>
+                <option>3 hours</option>
+                <option>3 hours 30 minutes</option>
+                <option>4 hours</option>
+                <option>4 hours 30 minutes</option>
+                <option>5 hours</option>
+              </select>
+        </div>
+
+        
+</body>
+
+
+</html>

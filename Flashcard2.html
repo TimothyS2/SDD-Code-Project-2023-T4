@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Settings</title>
+    <meta name='viewport' content='width=device-width'>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src='script.js'></script>
+</head>
+
+<body>
+    <div class="container" style="text-align: center;">
+        <!-- Using a div tag to keep the home button, title and settings button on the same line-->
+        <img class="clickable"
+          src='Images/Home.png' alt='Home'style="width:50px;height:50px;" onclick= window.location.href='main.html'>
+        <h1 style="font-size: 52;"> Flashcards </h1>
+        <img class="clickable" src="Images/Settings.png" style="width:50px;height:50px; margin-left:20%" onclick= window.location.href='Settings.html'>
+      </div>
+    
+     <h3 style="text-align: center; margin-bottom: 20px;">
+     <!-- Heading of the page-->
+     Flashcard 2 of 5
+     </h3>
+
+     <div class="cardContainer" onclick="flipCard()">
+        <div class="flashcard" id="flashcard">
+            <div class="front">
+                Card 2<br><br>
+                A Question
+            </div>
+            <div class="back">
+                An Answer
+            </div>
+        </div>
+     </div>
+
+     <div class="containerMain" style="margin-top: 350px;margin-left: 20%;" >
+        <img src="Images\Left Arrow.png" style="cursor:pointer; margin-top: 45%; margin-left: 10%; width: 50px;" onclick=window.location.href="Flashcard1.html">
+        <p style="text-align: left; font-size: 30px; padding-top: 60px;">2/5</p>
+        <img src="Images\Right Arrow.png" style="cursor:pointer; margin-top: 45%; margin-left: 10%; width: 50px;" onclick=window.location.href="Flashcard3.html" >
+    </div>
+
+</body>
+
+
+</html>

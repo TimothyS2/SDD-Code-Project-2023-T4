@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name="viewport" content="width=device-width">
   <title>SDD AST1</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
@@ -10,15 +11,30 @@
 </head>
 
 <body>
-  <div class="container">
-    <!-- Using a div tag to keep the home button, title and logout button on the same line-->
+  <div class="containerMain" style="text-align: center;">
+    <!-- Using a div tag to keep the home button, title and settings button on the same line-->
     <img class="clickable"
-      src='Help 2.png' alt='Help'
-      style="width:50px;height:50px;" onclick="href= 'main.html'">
-    <h1 style="font-size: 52;"> Study App Name </h1>
-    <button class="clickable" style="margin-left: 20%;">Button 1</button>
+      src='Images/Home.png' alt='Home'style="width:50px;height:50px;" onclick= window.location.href='main.html'>
+    <h1 style="font-size: 52;"> SDD Study app </h1>
+    <button class="clickable" style="margin-left:20%;width: 100px; height: 80px;">Logout (W.I.P)</button>
+    <img class="clickable" src="Images/Settings.png" style="width:50px;height:50px" onclick= window.location.href='Settings.html'>
   </div>
-  <p> Hello world</p>
+
+    <h2 style="text-align: center;">
+      <!-- Heading of the page-->
+      Home
+    </h2>
+
+    <!--Creating the main buttons-->
+    <p>
+      <button class="clickable" type="button" onClick="window.location.href='MultipleChoice.html'"> Multiple Choice Quiz </button>
+      <br>
+      <button class="clickable" type="button" onClick="window.location.href='Flashcard1.html'"> Flashcards </button> 
+      <img src="Images\Goals graphic.PNG" style="width: 230px;height: auto; float:right; margin-right: 15%; position: absolute; top: 30%;">
+      <br>
+      <button class="clickable" type="button" onClick="window.location.href='ClozePassage.html'"> Cloze Passage </button>
+    </p>
+
     <!-- Start -->
   <p> </p>
 </body>

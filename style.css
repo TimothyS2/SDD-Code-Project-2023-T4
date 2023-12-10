@@ -2,13 +2,64 @@ html, body {
     height: 100%;
     width: 100%;
   }
-  .container{display: grid;
+  .containerMain{display: grid;
     align-items: center; 
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 5px;}
+
+    .container{display: grid;
+      align-items: center; 
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 5px;}
 
     button{width:200px;
       height: 75px;
       margin-right: 10%;
-      margin-left: 10% ;
+      margin-left: 10%;
+      margin-bottom:4% ;
      }
+
+.rectangle{
+  height: 70px;
+  width: 100px;
+  background-color: #dbd6d5;
+  padding-top: 25px;
+}
+
+.flashcard {
+  width: 400px;
+  height: 160px;
+  background-color: antiquewhite;
+  margin-left: 20%;
+  margin-right: 20%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+;
+}
+
+.cardContainer{
+  position:absolute;
+}
+
+.flashcard{
+  position:relative;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+}
+
+.front, .back{
+  text-align: center;
+  backface-visibility: hidden;
+}
+
+.back{
+  transform: rotateY(180deg);
+}
+.flipCardAction{
+  transform: rotateY(180deg);
+}
+
+.clozePassageBackground{
+  width: 500px;
+  height: 100px;
+  background-color: antiquewhite;
+}
