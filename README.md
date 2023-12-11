@@ -13,6 +13,9 @@ This is a prototype of a study app for year 12 SDD (Software Development and Des
 - **Multiple appearance themes**, allowing for more effective user experience
 There are currently 5 questions for each activity in this prototype.
 
+**How to access the different screens**
+To access the home page from the login page, input any text into the studentID and Password fields.
+To access the settings page, click the top-right cog icon on any page after logging in.
 
 **For question and answer customisations:**
 
